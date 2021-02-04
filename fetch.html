@@ -2,7 +2,11 @@
 <html>
 <body>
     <input type="button" value="fetch" onclick="
-        alert('hi');
+        fetch('html').then(function(response){
+            response.text().then(function(text){
+            document.querySelector('article').innerHTML = text;
+            })
+        })
     ">
 </body>
 </html>
